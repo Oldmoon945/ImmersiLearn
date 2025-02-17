@@ -1,0 +1,162 @@
+/* 更改 primeVue 樣式 */
+@use './_varaibles.scss' as *;
+
+// DataTable
+.p-datatable {
+    text-align: center !important;
+    .p-row-odd {
+        background-color: $color-gray3 !important;
+    }
+    .p-row-even {
+        background-color: $color-gray4 !important;
+    }
+    .p-datatable-tbody {
+        > tr {
+            &:hover{
+                background-color: $color-yellow1 !important;
+            }
+            > td {
+                text-align: center;
+                border: 0.1px solid white;
+            }
+        }
+    }
+    .p-datatable-column-header-content {
+        justify-content: center;
+        font-size: $text-large;
+    }
+    .p-datatable-thead {
+        > tr:nth-child(1) > th {
+            background-color: $color-brown1 !important;
+            color: white !important;
+            border-bottom: solid white;
+            border: 0.1px solid white;
+        }
+        > tr:nth-child(2) > th {
+            background-color: $color-gray3 !important;
+            color: white !important;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            border: 0.1px solid white;
+        }
+    }
+    .p-datatable-sort-icon {
+        color: white;
+    }
+    .p-datatable-column-sorted .p-datatable-sort-icon {
+        color: white;
+    }
+    .p-paginator-page.p-paginator-page-selected {
+        color: $color-brown1;
+        background: $color-yellow1;
+    }
+}
+
+// datatable > inputtext
+.p-datatable-filter-element-container {
+    .p-inputtext:enabled:hover {
+        border-color: $color-brown1;
+    }
+    .p-inputtext:enabled:focus{
+        border-color: $color-brown1;
+        box-shadow: none;
+    }
+}
+
+// datatable checkbox
+.p-checkbox-checked .p-checkbox-box {
+    background: $color-brown1 !important; /* ✅ 變更勾選時的背景顏色 */
+    border-color: white !important; /* ✅ 變更勾選時的邊框顏色 */
+}
+.p-checkbox:not(.p-disabled):has(.p-checkbox-input:hover) .p-checkbox-box {
+    border-color: $color-brown1 !important; /* ✅ 滑鼠移上去時的邊框顏色 */
+}
+
+// inputtext
+.p-inputtext {
+    font-size: $text-large !important;
+}
+.p-inputtext:hover {
+    border-color: $color-brown1 !important;
+}
+.p-inputtext:enabled:focus {
+    border-color: $color-brown1 !important;
+    box-shadow: none !important;
+}
+
+// floatlabel
+.p-floatlabel:has(input:focus) label {
+    color: $color-brown1 !important;
+}
+.p-floatlabel label {
+    color: $color-gray1 !important;
+}
+
+// select
+.p-select:not(.p-disabled):hover {
+    border-color: $color-brown1 !important;
+}
+.p-select:not(.p-disabled).p-focus {
+    box-shadow: none !important;
+    border-color: $color-brown1 !important;
+}
+.p-select-option.p-select-option-selected {
+    background: $color-yellow1 !important;
+    color: $color-brown1 !important;
+}
+
+// textarea
+.p-textarea:enabled:focus {
+    border-color: $color-brown1 !important;
+    box-shadow: none !important;
+}
+.p-textarea:enabled:hover {
+    border-color: $color-brown1 !important;
+}
+
+// dialog
+.p-dialog {
+    border-color: $color-yellow2 !important;
+    .omc-btn {
+        width: 100%;
+        border: none;
+        border-radius: 8px;
+        padding: 5px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        font-size: $text-large;
+        &.nomal {
+            background-color: $color-brown1;
+            color: white;
+        }
+        &.attention {
+            background-color: $color-red1;
+            color: white;
+        }
+        &.success {
+            background-color: $color-green;
+            color: white;
+        }
+        &:hover {
+            box-shadow:none;
+            background-color: $color-yellow1;
+            color: black;
+        }
+    }
+}
+.p-dialog-header {
+    color: white;
+    padding: 0px 0px 0px 10px !important;
+    background-color: $color-yellow2;
+    border-radius: 10px 10px 0px 0px;
+}
+.p-dialog-header-actions .p-button-text.p-button-secondary {
+    color: white;
+}
+.p-dialog-content {
+    padding: 10px !important;
+    font-size: $text-large;
+}
+.p-dialog-footer {
+    border-top: 1px solid $color-gray3;
+    padding: 5px !important;
+}

@@ -1,0 +1,13 @@
+@use './global/_reset.scss'; // 清除原本 scss
+@use './global/_theme.scss'; // 系統主題
+
+/* primeVue  */
+@use "./global/_primeVue.scss"; // 更改 primeVue 樣式
+/* sweetAlert */
+@use "./global/_sweetAlert.scss"; // 更改 sweetAlert 樣式
+
+/* views */
+@use './views/_entry.scss';
+@use './views/_home.scss';
+@use './views/_reading.scss';
+@use './views/_addEditResource.scss'

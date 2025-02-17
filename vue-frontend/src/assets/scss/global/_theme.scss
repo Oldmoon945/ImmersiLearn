@@ -1,0 +1,120 @@
+@use './_varaibles.scss' as *;
+
+.theme-default {
+    .nomal-background {
+        height: 100vh;
+        background-image: url('@/assets/design/images/background.png'); /* 圖片路徑 */
+        background-size: cover;  /* 讓圖片覆蓋整個畫面 */
+        background-position: center; /* 置中圖片 */
+        background-repeat: no-repeat; /* 不重複顯示 */
+    }
+
+    font-family: 'GenSenRounded2TW', sans-serif;
+    .omc-text {
+        // 尺寸
+        &.xxlarge {
+            font-size: $text-xxlarge;
+        }
+        &.xlarge {
+            font-size: $text-xlarge;
+        }
+        &.large {
+            font-size: $text-large;
+        }
+        &.medium {
+            font-size: $text-medium;
+        }
+        &.small {
+            font-size: $text-small;
+        }
+        &.xsmall {
+            font-size: $text-xsmall;
+        }
+        // 顏色
+        &.nomal {
+            color: $color-brown1;
+        }
+        &.attention {
+            color: $color-red1;
+        }
+        &.white {
+            color: white;
+        }
+        // 文字效果
+        &.bold {
+            font-weight: bold;
+        }
+        
+    }
+
+    .omc-btn {
+        width: 100%;
+        border: none;
+        border-radius: 8px;
+        padding: 5px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        font-size: $text-large;
+        &.nomal {
+            background-color: $color-brown1;
+            color: white;
+        }
+        &.attention {
+            background-color: $color-red1;
+            color: white;
+        }
+        &.success {
+            background-color: $color-green;
+            color: white;
+        }
+        &:hover {
+            box-shadow:none;
+            background-color: $color-yellow1;
+            color: black;
+        }
+    }
+
+    .omc-dropdown-menu {
+        position: absolute;
+        background: white;
+        border: 1px solid #ddd;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        width: auto;
+        z-index: 10;
+        ul {
+            list-style: none;
+            padding: 5px 0px;
+            margin: 0;
+        }
+        li {
+            padding: 10px 30px;
+            
+            cursor: pointer;
+        }
+        li:hover {
+            background-color: $color-gray4;
+        }
+    }
+    .omc-point {
+        cursor: pointer;
+    }
+
+    .omc-container {
+        background-color: white;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+        .radius {
+            border-radius: 10px;
+        }
+    }
+    /* 整個滾動條 */
+    ::-webkit-scrollbar {
+        width: 3px; /* 控制滾動條寬度 */
+    }
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1; /* 軌道背景 */
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: #888; /* 滾動條滑塊 */
+    }
+    
+}

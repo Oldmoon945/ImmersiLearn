@@ -1,0 +1,42 @@
+@use '../global/varaibles' as *;
+.views-home {
+    .home-btn {
+        cursor: pointer;
+        text-align: center;
+        display: inline-block; // 避免內部元素不受影響
+        margin: 0px 30px;
+        &:hover {
+            .icon {
+                box-shadow: none; // 移除陰影
+                background-color: $color-yellow1;
+            }
+    
+            .text {
+                color: black; // 變更文字顏色
+            }
+        }
+    
+        .icon {
+            font-size: 80px;
+            border-radius: 10px;
+            border: none;
+            padding: 15px 20px;
+            background: $color-brown1;
+            box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+            color: white;
+        }
+    
+        .text {
+            text-align: center !important;
+            letter-spacing: 18px;
+            margin-top: 10px;
+            font-size: $text-small;
+            color: $color-gray2;
+    
+            & span:last-child {
+                letter-spacing: 0; // 確保最後一個字元沒有額外間距
+            }
+        }
+    }
+    
+}

@@ -1,0 +1,38 @@
+@use '../global/varaibles' as *;
+.views-reading {
+    .no-camera {
+        background: $color-gray4;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .end-area {
+        background: $color-yellow2;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+        padding: 5px;
+    }
+    .position-relative {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .video-style {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+    }
+    
+    .canvas-style {
+        position: absolute;
+        pointer-events: none; /* 防止 Canvas 擋住點擊事件 */
+    }
+    
+}
